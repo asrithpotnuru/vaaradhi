@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VARAADHI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .c1 {
+            display: flex;
+            background-color: darkgreen;
+            color: white;
+            padding: 10px;
+        }
+        .parent {
+            display: flex;
+            justify-content: space-between;
+            background-color: #F8C027;
+            padding: 15px;
+        }
+        .bar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+        }
+        img {
+            display: block;
+            height: 100px;
+        }
+        .search {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+            align-items: center;
+            padding: 20px;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .main img {
+            width: 120%;
+            max-width: 1400px;
+            height: auto;
+        }
+        .head {
+            padding: 30px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product {
+            border: 1px solid white;
+            border-radius: 1px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            width: 90%;
+            height: 50%;
+            border-radius: 5px;
+        }
+        .name, .price {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .image-container{
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img{
+            display: block;
+            width: 220vh;
+            height: 80vh;
+            gap: 20px;
+        }
+        .text-overlay{
+            position: absolute;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            align-items: stretch;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            padding: 80px;
+            gap: 140px;
+        }
+        .flex img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .as{
+            font-weight: bold;
+            font-size: 20px;
+            gap: 100px;
+        }
+        .asr{
+           display: flex;
+           justify-content: center;
+           font-weight: italic;
+           font-size: 20px;
+        }
+        .one{
+            background-color: #F8C027;
+        }
+        .two{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: red;
+        }
+        .three{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+            font-weight: bold;
+            padding: 30px;
+            text-decoration: underline;
+        }
+        .four{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            padding: 40px;
+        }
+        .five{
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+        }
+        .five img{
+            gap: 80%;
+            height: auto;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            width: 50vw;
+        }
+        .six{
+            flex: 1;
+        
+        }
+        .seven{
+            display: grid;
+            padding: 20px;
+            margin-left: -20px;
+        }
+        .eight{
+            display: grid;
+            padding: 10px;
+            margin-left: -10px;
+            margin-top: -10px;
+            
+        }
+        .nine{
+            color:green;
+        }
+        .ten{
+            padding: 10px;
+            margin-left: -10px;
+        }
+        .eleven{
+            padding: 20px;
+            margin-left: -20px;
+        }
+        .tewlve{
+            margin-top: -16px;
+            padding: 10px;
+            margin-left: -11px;
+        }
+        .tewlve button{
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            gap: 10px;
+        }
+        .thirt{
+            padding: 10px;
+            margin-left: -11px;
+        }
+        .fourt button{
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            color: green;
+            background-color: #F8C027;
+
+        }
+        .fif{
+            padding: 10px;
+            margin-left: -11px;
+            color: green;
+            gap: 10px;
+            display: grid;
+            direction: row;
+           justify-content: space-between;
+
+        }
+        .fif button{
+           border: 1px solid black;
+           border-radius: 10px;
+           padding: 10px;
+           gap: 20px;
+           font-weight: bold; 
+           background-color: green;
+        }
+        .sixt{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .sixt img{
+            border: 1px solid white;
+            border-radius: 20px;
+            height: 200px;
+            width: 200px;
+            gap: -20px;
+
+        }
+        .sevent{
+            font-weight: bold;
+            font-size: 5vw;
+            
+        }
+        .sevent marquee{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }.eighte{
+            color: gold;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            gap: 10px;
+        }
+        .cap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: green;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+           
+        }
+        .box img{
+            flex:1;
+            height:auto;
+            width: 6vw;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        .box1{
+            flex:1;
+            padding: 80px;
+            background-color: #F8C027;
+            border: 1px solid white;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;   
+        }
+        .box1 h1{
+            padding: 5px;
+            margin-top: 10%;
+            display: flex;
+            align-items: center;
+        }
+        .box1 p{
+            padding: 15px;
+            margin-left: -3%;
+            font-size: 20px;
+            text-align: justify;
+
+        }
+        .ra{
+            text-align: center;
+            padding: 50px;
+            font-size: 80px;
+            background:linear-gradient(180deg,rgba(37,105,63,1)2%,rgba(255,255,255,1)98%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 200px;
+        }
+        .rah p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10%;
+            font-size: 30px;
+            font-weight: bold;
+            color: green;
+        
+        }
+        .rahuuu{
+            display: flex;
+            background-color: #F1C40F;
+            padding: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            gap: 10px;
+            
+        }
+        .rahu{
+            margin-bottom: 20px;
+            
+        }
+        .rahu h1{
+            padding: 10px;
+        }
+        .rahu p{
+            padding: 10px;
+            font-size: 20px;
+            text-align: left;
+        }
+        .rahul{
+            background-color: #196F3D;
+            border-radius: 8px;
+            margin-left: 80px;
+        }
+        .rahu h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .rahul p{
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            border: black;
+
+        }
+        .rahul p {
+            background-color: #196F3D;
+            color: #fff;
+            margin-bottom: 10px;
+            padding: 20px;
+            
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: underline;
+            height: 100;
+            font-weight: bold;
+        }
+        .rahul p:hover {
+            background-color: #145A32;
+        }
+        .footer{
+            padding: 10px;
+            margin-top: 15%;
+            margin-bottom: 20px;
+            background-color: #F8C027;
+            display: flex;
+            gap: 100px;
+           
+        }
+        .foot2{
+            display: grid;
+            grid-gap: 8px;
+        }
+        .foot2 a{
+            text-decoration: none;
+            color: #1A1A1A;
+            font:14px Lora,serif;
+            font-size: 14px;
+        }
+        .foot3 {
+            display: grid;
+            grid-gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <marquee behaviour="scroll" direction="left" scrollamount="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. FREE SHIPPING ON ORDERS ABOVE ₹499 .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+    </div>
+    <div class="parent">
+        <div class="bar">
+            <i class="fa fa-bars"></i>
+        </div>
+        <img src="varadhi logo.avif" alt="Logo">
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+    <div class="main">
+        <img src="ghee.webp" alt="Main Image">
+    </div>
+    <div class="head">
+        <h1>Go Natural, Go Healthy.</h1>
+    </div>
+    <div class="images">
+        <div class="product">
+            <img src="img2.webp" alt="Small bee honey">
+            <div class="name">Small bee honey</div>
+            <div class="price">Rs. 1,249.00</div>
+        </div>
+        <div class="product">
+            <img src="img3.webp" alt="Wild Raw Honey">
+            <div class="name">Wild Raw Honey</div>
+            <div class="price">From Rs. 575.00</div>
+        </div>
+        <div class="product">
+            <img src="img4.webp" alt="Natural Honey">
+            <div class="name">Natural Honey</div>
+            <div class="price">From Rs. 475.00</div>
+        </div>
+        <div class="product">
+            <img src="img5.webp" alt="A2 Desi Cow Ghee">
+            <div class="name">A2 Desi Cow Ghee</div>
+            <div class="price">From Rs. 925.00</div>
+        </div>
+        <div class="product">
+            <img src="img6.webp" alt="Lakshman Phal">
+            <div class="name">Lakshman Phal</div>
+            <div class="price">Rs. 498.00</div>
+        </div>
+        <div class="product">
+            <img src="img7.webp" alt="Forest Turmeric Powder">
+            <div class="name">Forest Turmeric Powder</div>
+            <div class="price">Rs. 300.00</div>
+        </div>
+        <div class="product">
+            <img src="img8.webp" alt="Natural Turmeric">
+            <div class="name">Natural Turmeric</div>
+            <div class="price">From Rs. 199.00</div>
+        </div>
+        <div class="product">
+            <img src="img9.webp" alt="Natural Red Chilli Powder">
+            <div class="name">Natural Red Chilli Powder</div>
+            <div class="price">From Rs. 220.00</div>
+        </div>
+        <div class="product">
+            <img src="img10.webp" alt="Hand Pounded cashews">
+            <div class="name">Hand Pounded cashews</div>
+            <div class="price">Rs. 899.00</div>
+        </div>
+        <div class="product">
+            <img src="img11.webp" alt="Kashmiri Saffron 1gm">
+            <div class="name">Kashmiri Saffron 1gm</div>
+            <div class="price">Rs. 550.00</div>
+        </div>
+        <div class="product">
+            <img src="img12.webp" alt="Mango pickle">
+            <div class="name">Mango pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+        <div class="product">
+            <img src="img13.webp" alt="Gongura pickle">
+            <div class="name">Gongura pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+        <div class="product">
+            <img src="img14.webp" alt="Allam pickle">
+            <div class="name">Allam pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+        <div class="product">
+            <img src="img15.webp" alt="Pandu mirchi pickle">
+            <div class="name">Pandu mirchi pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+        <div class="product">
+            <img src="img16.webp" alt="Karivepaku pickle">
+            <div class="name">Karivepaku pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+        <div class="product">
+            <img src="img17.webp" alt="Lemon pickle">
+            <div class="name">Lemon pickle</div>
+            <div class="price">Rs. 290.00</div>
+        </div>
+    </div>
+        <div class="image-container">
+            <img src="cow.webp" alt="Error">
+            <div class="text-overlay">We Are The One-stop Destination For A Wide Range Of Organic And 
+                Naturally Grown Foods</div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="a">
+            <img src="img19.png" alt="Error">
+            <div class="as">
+            <p>Farm-to-Table Freshness</p></div>
+            <div class="asr">
+            <p>The vibrant flavors and superior quality of food that has been carefully harvested and brought straight to your doorstep.</p></div>
+            </div>
+            <div class="b">
+                <img src="img20.png" alt="Error">
+                <div class="as">
+                <p>Pure and Clean Ingredients</p></div>
+                <div class="asr">
+                <p>The peace of mind that comes from consuming food free from harmful chemicals, pesticides, and artificial additives.</p></div>
+            </div>
+            <div class="c">
+                <img src="img21.png" alt="Error">
+                <div class="as">
+                <p>Nutritional Excellence</p></div>
+                <div class="asr">
+                <p>Products are packed with essential nutrients, vitamins, and minerals, providing customers with optimal nutrition.</p></div>
+            </div>
+        </div>
+        <div class="one">
+            <div class="two">
+                <h1>Problems With Modern Farming</h1>
+            </div>
+            <div class="three">
+                <p>Synthetic Pesticides</p>
+                <p>Chemical Fertilizers</p>
+                <p>Genetically Modified Organisms</p>
+                <p>Environmental Impact</p>
+            </div>
+            <div class="four">
+                <p>Conventional farming relies on the use of synthetic pesticides, which are chemical substances specifically designed to kill or control pests that can damage crops. These pesticides are typically derived from artificial compounds and can have negative impacts on the environment, including soil degradation, water pollution, and harm to beneficial insects and wildlife.</p>
+            </div>
+        </div>
+        <div class="five">
+            <img src="img22.webp" alt="Error">
+            <div class="six">
+                <div class="seven">
+                <h1>Natural Turmeric</h1></div>
+                <div class="eight">
+                <p>Rs. 399.00</p></div>
+                <div class="nine">
+                <i class="fa fa-star checked">In stock</i></div><br>
+                <div class="ten">
+                <i class="fa fa-star checked">4.9</i></div>
+                <div class="eleven">
+                <p>kg: 1/2kg</p></div>
+                <div class="tewlve">
+                <button>1/2 kg</button>
+                <button>1/4 kg</button></div>
+                <div class="thirt">
+                <p>Quantity:</p></div>
+                <div class="fourt">
+                <button>-&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;+</button></div><br>
+                <div class="fif">
+                <i class="fa fa-bus">Free Shipping</i><br>
+                <button>&nbsp;&nbsp;&nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;&nbsp;&nbsp;</button></div>
+            </div>
+        </div>
+        <div class="sixt">
+            <img src="img23.webp" alt="Error">
+            <img src="img24.webp" alt="Error">
+            <img src="img25.webp" alt="Error">
+            <img src="img26.webp" alt="Error">
+            <img src="img27.webp" alt="Error">
+        </div>
+        <div class="sevent">
+            <marquee behaviour="scroll" direction="left" scrollamount="10">Go Natural, Go Healthy.</marquee>
+        </div>
+        <div class="eighte">
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+        </div>
+        <div class="cap">
+            <h1>In this polluted world, I have tasted original real honey 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taste, Hats off!</h1>
+        </div>
+        <div class="box">
+            <img src="img28.webp" alt="Error">
+            <div class="box1">
+                <h1>About Us</h1>
+                <p>Welcome to Vaaradhi Farms! I am Nethra and I am extremely passionate about healthy living and sustainable food practices.<br>
+                <br><br>I am committed to making a positive impact on the world through our business. I hope that you'll join us on this journey towards healthy living and sustainable food practices.<br>
+                <br><br>Thank you for choosing our organic food products, and I look forward to serving you soon.</p>
+            </div>
+        </div>
+        <div class="ra">
+            <p>100% Pure</p>
+        </div>
+        <div class="rah">
+            <p>Our Products Are Free From Chemicals And Additives</p>
+        </div>
+        <div class="rahuuu">
+            <div class="rahu">
+                <h1>FAQ</h1>
+                <p>Check out the most common questions our customers asked and if you<br>Still have questions, Contact our customer support.</p>
+            </div>
+            <div class="rahul">
+                <p>How much time does it take for shipping?</p>
+                <p>Do you accept returns and refunds?</p>
+                <p>What payment gateways do you accept?</p>
+    
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foot1">
+                <h1>Sign up to our newsletter</h1>
+            </div>
+            <div class="foot2">
+                <h2>Customer Care</h2><br>
+                <a href="#">FAQ</a><br>
+                <a href="#">Shipping Policy</a><br>
+                <a href="#">Refund Policy</a><br>
+                <a href="#">Cancellation Policy</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Contact Information</a><br>
+                <a href="#">Wild forest honey certificate</a><br>
+                <a href="#">Dark Forest Honey Certificate</a><br>
+            </div>
+            <div class="foot3">
+                <h3>Contact Info</h3>
+                <p>Trade Name : Vaaradhi Farms</p>
+                <p>Email Support : vaaradhifarms@gmail.com</p>
+                <p>Customer Care Number :</p>
+                <p>+91 89770 21193</p>
+                <p>+91 89770 21197</p>
+                <p>Customer Support Timings : 10:30am to 6:30pm</p>
+                <p>Address : Manikonda, Hyderabad, Telangana , Pin - 500089</p>
+                <p>FSSAI : 23623028001252</p>
+            </div>
+        </div>
+</body>
+</html>
